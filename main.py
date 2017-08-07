@@ -1,11 +1,12 @@
-from mypyfunc.memoize import memoize
-from mypyfunc.mapping import mappingClassic
-from mypyfunc.mapping import mapping
-from mypyfunc.filtering import filteringClassic
-from mypyfunc.filtering import filtering
-from mypyfunc.transduce import transduce
-from mypyfunc.push import push
-from mypyfunc.compose import compose
+from mylibs.memoize import memoize
+from mylibs.mapping import mappingClassic
+from mylibs.mapping import mapping
+from mylibs.filtering import filteringClassic
+from mylibs.filtering import filtering
+from mylibs.transduce import transduce
+from mylibs.push import push
+from mylibs.compose import compose
+from mylibs.arity import _arity
 
 #
 # TESTING: memoize.py
@@ -16,6 +17,7 @@ print('TESTING: memoize.py')
 
 def bitcoin_to_usd(btc):
     return btc * 527
+
 
 mem_bitcoin_to_usd = memoize(bitcoin_to_usd)
 
@@ -34,7 +36,7 @@ print('')
 print('')
 print('TESTING: mapping.py')
 
-res = mappingClassic(lambda x: x + 1)([], 1);
+res = mappingClassic(lambda x: x + 1)([], 1)
 
 print(res)
 
@@ -45,7 +47,7 @@ print('')
 print('')
 print('TESTING: filtering.py')
 
-res = filteringClassic(lambda x: x % 2 == 0)([2,4], 7);
+res = filteringClassic(lambda x: x % 2 == 0)([2,4], 7)
 
 print(res)
 
@@ -66,7 +68,6 @@ xform = compose(
 res = transduce( xform, push, [], listItems )
 
 print(res)
-
 
 # def test_var_args(f_arg, *argv):
 #     print "first normal arg:", f_arg
