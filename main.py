@@ -1,12 +1,12 @@
-from mylibs.memoize import memoize
-from mylibs.mapping import mappingClassic
-from mylibs.mapping import mapping
-from mylibs.filtering import filteringClassic
-from mylibs.filtering import filtering
-from mylibs.transduce import transduce
-from mylibs.push import push
-from mylibs.compose import compose
-from mylibs.arity import _arity
+from myramda.memoize import memoize
+from myramda.mapping import mappingClassic
+from myramda.mapping import mapping
+from myramda.filtering import filteringClassic
+from myramda.filtering import filtering
+from myramda.transduce import transduce
+from myramda.push import push
+from myramda.compose import compose
+from myramda.arity import _arity
 
 #
 # TESTING: memoize.py
@@ -76,7 +76,7 @@ print(res)
 
 # test_var_args('yasoob','python','eggs','test')
 
-    
+
 # var cache = {};
 #   return _arity(fn.length, function() {
 #     var key = mFn.apply(this, arguments);
@@ -85,7 +85,7 @@ print(res)
 #     }
 #     return cache[key];
 #   });
-    
+
 
 
 # name = "Bucky"
